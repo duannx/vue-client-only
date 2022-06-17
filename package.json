@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
-  "directories": {
-    "lib": "lib",
-    "doc": "docs"
-  },
   "files": [
     "lib/",
     "types/",
@@ -32,6 +28,9 @@
     "vue": "^3.2.37"
   },
   "dependencies": {},
+  "peerDependencies": {
+    "vue": "^3.x"
+  },
   "engines": {
     "node": ">=8.0.0"
   }

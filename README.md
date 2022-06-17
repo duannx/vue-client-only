@@ -1,10 +1,5 @@
 # vue-client-only
 
-[![Build Status](https://travis-ci.org/duannx/vue-client-only.svg?branch=master)]()
-[![CircleCi](https://circleci.com/gh/duannx/vue-client-only/tree/master.svg?style=shield)]()
-[![dependencies Status](https://david-dm.org/duannx/vue-client-only/status.svg)](https://david-dm.org/duannx/vue-client-only)
-[![devDependencies Status](https://david-dm.org/duannx/vue-client-only/dev-status.svg)](https://david-dm.org/duannx/vue-client-only?type=dev)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![npm](https://img.shields.io/npm/v/vue-client-only.svg)](https://www.npmjs.com/package/vue-client-only)
 [![license](https://img.shields.io/github/license/duannx/vue-client-only.svg)]()
 [![dependabot](https://img.shields.io/badge/dependabot-enabled-brightgreen.svg?style=plastic&logo=dependabot)]()
@@ -12,19 +7,57 @@
 
 ## What is vue-client-only?
 
-_Use this section to introduce your project. You can explain the goal of your project, why you created it, what are the use cases where it is useful._
+This component help you to render a component on the client side only.
 
-## Getting Started
+## Installation
 
-### Installation
-
+```js
+npm install --save @duannx/vue-client-only
+or
+yarn add @duannx/vue-client-only
 ```
-npm install --save vue-client-only
+
+## Usage
+
+```js
+import ClientOnly from '@duannx/vue-client-only'
+
+<client-only>
+    <some-component></some-component>
+    This will be render only in the client
+    <template #placeholder>
+      This is the placeholder that will be render on SSR
+    </template>
+</client-only>
 ```
 
-### Usage
+### Placeholder
+Use the `placeholder` slot to render something on SSR
+```js
+<client-only>
+    This will be render only in the client
+    <template #placeholder>
+      This is the placeholder that will be render on SSR
+    </template>
+</client-only>
+```
 
-_Use this section to explain how someone would use your project. It can be the API, some examples..._
+### Props
+- `is-show`: Boolean. Use this prop to control exactly when the component is rendered on the client. If you don't set this prop, the component will be rendered on the client only when the component is mounted.
+```js
+<!-- The default slot will be show only when isShow is set to true -->
+<client-only :is-show="isShow">
+    This will be render only in the client
+    <template #placeholder>
+      This is the placeholder that will be render on SSR
+    </template>
+</client-only>
+```
+
+## When to use this component?
+- When a component can not run on the server side: **Not really.** You can just move the logic that can only run on the browser to the mounted hook. No need to use this component.
+- When you want to reduce the server workload: **Yes.** This component will defer the rendering of the component on the server side. So your server will run faster, better server response time and reduce document size that transfer to the client.
+- When you want want to defer the rendering of the component on the client side: **Yes.** The `is-show` prop will help you. Almost time, the under the fold content is not useful when the page loads. So you can defer the rendering of all under the fold content till the page is loaded or the user interact with the page.
 
 ## Contributing
 
@@ -34,10 +67,6 @@ conduct, and the process for submitting pull requests to us.
 ## Versioning
 
 vue-client-only use [SemVer](http://semver.org/) for versioning.
-
-## Acknowledgment
-
-Use this section for acknowledgments. Is your project based on other projects? Have you've been help by someone you want to mention?
 
 ## License
 

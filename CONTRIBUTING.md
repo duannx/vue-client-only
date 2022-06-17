@@ -1,40 +1,27 @@
 
-## [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
-
-Please read the text so that you understand how to conduct while contributing to this project.
-
 ## Semantic Versioning
 
 vue-client-only use [SemVer](http://semver.org/) for versioning.
-
-## Documentation
-
-The content of the documentation is in the docs repository.
 
 ## Sending a Pull Request
 
 **Before submitting a pull request,** please make sure the following is done:
 
-1. Fork [the repository](https://github.com/duannx/vue-client-only) and create your branch from `master`.
+1. Fork [the repository](https://github.com/duannx/vue-client-only) and create your branch from `main`.
 2. If you've added code that should be tested, add tests!
 3. If you've changed APIs, update the documentation.
-4. Ensure the test suite passes (`npm test`).
-5. Format your code with [prettier](https://github.com/prettier/prettier) (`npm run prettier`).
-6. Make sure your code lints (`npm run lint`).
+4. Format your code.
 
 ### Development Workflow
 
-After cloning vue-client-only, run `npm i` to fetch its dependencies.
+After cloning vue-client-only, run `yarn` to fetch its dependencies.
 Then, you can run several commands:
 
-- `npm run dev` will build cjs and es module of vue-client-only in the `lib` folder and watch for changes.
-- `npm run lint` checks the code style.
-- `npm test` runs the complete test suite.
-- `npm test -- --watch` runs an interactive test watcher.
-- `npm test <pattern>` runs tests with matching filenames.
-- `npm run build` creates the cjs and es module of vue-client-only in the `lib` folder.
-
-Make sure that your pull request contains unit tests for any new functionality. This way we can ensure that we don't break your code in the future.
+- `yarn dev` will build module of vue-client-only to the `dist` folder and watch for changes.
+- `cd dev` move to dev folder to test the package.
+- `yarn` install dependencies of dev folder. (Only need to run once)
+- `yarn dev` to start dev server of the dev project, then test the package
+- `yarn build` creates the module of vue-client-only in the `dist` folder.
 
 ### License
 
