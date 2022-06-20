@@ -1,24 +1,21 @@
 {
-  "name": "vue-client-only",
+  "name": "@duannx/vue-client-only",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/index.js",
-  "files": [
-    "lib/",
-    "types/",
-    "bin/"
-  ],
+  "main": "./dist",
+  "private": false,
+  "author": "duannx",
+  "license": "MIT",
   "scripts": {
     "dev": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "publish-npm": "npm publish --access public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/duannx/vue-client-only.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "keywords": ["vue3", "client only", "vue client only", "no SSR", "vue no SSR"],
   "bugs": {
     "url": "https://github.com/duannx/vue-client-only/issues"
   },
