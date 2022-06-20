@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.18.5.tgz#337062363436a893a2d22faa60be5bb37091c83c"
   integrity sha512-YZWVaglMiplo7v8f1oMQ5ZPQr0vn7HPeZXxXWsxXJRjGVrzUFn9OxFQl1sb5wzfootjA/yChhW84BV+383FSOw==
 
+"@duannx/vue-client-only@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@duannx/vue-client-only/-/vue-client-only-1.0.0.tgz#d46f99d4444ec436ccffaf38f6b26f5c6e715e38"
+  integrity sha512-armabnCTj1sJiL45H9ubWpdBowBF71C3H4a5gXMPuywFLyD3S24f4qG2NC0mM2iqj8qq6UmiVhwutANEDevm3w==
+
 "@vitejs/plugin-vue@^2.3.3":
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.3.3.tgz#fbf80cc039b82ac21a1acb0f0478de8f61fbf600"

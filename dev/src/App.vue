@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import ClientOnly from '../../dist'
+import ClientOnly from '@duannx/vue-client-only'
 import { ref } from '@vue/reactivity'
 import { onMounted } from '@vue/runtime-core'
 const isShow = ref(false)
