@@ -84,7 +84,9 @@ Some above the fold content ...
 </template>
 
 ```
-- 
+
+## DEMO
+This [DEMO](https://duannx.github.io/vue-client-only/) only has the client side. It shows how the component looks like in the client. [Demo code](https://github.com/duannx/vue-client-only/blob/main/dev/src/App.vue)
 
 ## Contributing
 
