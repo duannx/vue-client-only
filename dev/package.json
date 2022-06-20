@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@duannx/vue-client-only": "^1.0.0",
     "vue": "^3.2.25"
   },
   "devDependencies": {
