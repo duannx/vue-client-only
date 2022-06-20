@@ -1,8 +1,10 @@
 {
   "name": "@duannx/vue-client-only",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "./dist",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
   "private": false,
   "author": "duannx",
   "license": "MIT",
