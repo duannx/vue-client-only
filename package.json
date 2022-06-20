@@ -25,6 +25,9 @@
   "homepage": "https://github.com/duannx/vue-client-only#readme",
   "devDependencies": {
     "rollup": "^2.75.6",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4",
     "vue": "^3.2.37"
   },
   "dependencies": {},
