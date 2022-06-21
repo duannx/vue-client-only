@@ -23,8 +23,8 @@ var index = vue.defineComponent({
         vue.onMounted(function () {
             isMounted.value = true;
         });
-        var defaultVnode = slots["default"] ? slots["default"]() : vue.createCommentVNode('Client only rendering with empty default slot');
-        var placeholderVNode = slots.placeholder ? slots.placeholder() : vue.createCommentVNode("Client only rendering component placeholder");
+        var defaultVnode = slots["default"] ? vue.h(function () { return slots["default"](); }) : vue.createCommentVNode('Client only rendering with empty default slot');
+        var placeholderVNode = slots.placeholder ? vue.h(function () { return slots.placeholder(); }) : vue.createCommentVNode("Client only rendering component placeholder");
         return function () { return isShowDefaultSlot.value ? defaultVnode : placeholderVNode; };
     }
 });

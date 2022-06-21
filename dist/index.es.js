@@ -1,4 +1,4 @@
-import { defineComponent, ref, computed, onMounted, createCommentVNode } from 'vue';
+import { defineComponent, ref, computed, onMounted, h, createCommentVNode } from 'vue';
 
 // client only component
 // render the placeholder slot on SSR
@@ -21,8 +21,8 @@ var index = defineComponent({
         onMounted(function () {
             isMounted.value = true;
         });
-        var defaultVnode = slots["default"] ? slots["default"]() : createCommentVNode('Client only rendering with empty default slot');
-        var placeholderVNode = slots.placeholder ? slots.placeholder() : createCommentVNode("Client only rendering component placeholder");
+        var defaultVnode = slots["default"] ? h(function () { return slots["default"](); }) : createCommentVNode('Client only rendering with empty default slot');
+        var placeholderVNode = slots.placeholder ? h(function () { return slots.placeholder(); }) : createCommentVNode("Client only rendering component placeholder");
         return function () { return isShowDefaultSlot.value ? defaultVnode : placeholderVNode; };
     }
 });
