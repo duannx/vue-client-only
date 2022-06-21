@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js",
+    "pre-build": "rimraf dist",
+    "build": "npm run pre-build && rollup -c rollup.config.js",
     "publish-npm": "npm publish --access public"
   },
   "repository": {
